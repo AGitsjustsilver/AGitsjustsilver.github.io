@@ -1,0 +1,61 @@
+html, body {
+	background-color: #87817C;
+
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+/* Consider
+https://www.w3schools.com/css/css_website_layout.asp*/
+
+.table {
+	border-radius: 5px;
+}
+
+#contentContainer {
+	background-color: #554F4F;
+
+	margin: auto;
+	padding-top: 5px;
+	padding-bottom: -5px;
+
+	width: 75%;
+	height: 75%;
+
+	min-height: 10vh;
+}
+
+#titleBanner, #mainContent {
+	/*background-color: #87817C;*/
+	margin: 0 auto;
+}
+
+#titleBanner {
+	background-color: rebeccapurple;
+
+	margin: 0% .5% .5% .5%;
+
+	width: 99%;
+	height: 24%;
+	min-height: 200px;
+}
+
+#mainContent {
+	background-color: black;
+
+	margin: .5%;
+
+	width: 99%;
+	height: 74%;
+}
+
+#hiddenContent {
+	z-index: -1;
+	padding-top: 1%;
+
+	background-color: green;
+
+	width: 5%;
+	height: 2%;
+}

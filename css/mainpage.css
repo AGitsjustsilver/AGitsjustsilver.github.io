@@ -1,5 +1,5 @@
 html, body {
-	background-color: #87817C;
+	background-color: #304d6d;
 
 	width: 100%;
 	height: 100%;
@@ -14,27 +14,25 @@ https://www.w3schools.com/css/css_website_layout.asp*/
 }
 
 #contentContainer {
-	background-color: #554F4F;
+	background-color: #545e75;
 
-	margin: auto;
-	padding-top: 5px;
-	padding-bottom: -5px;
+	margin: 5px auto;
+	padding: 2px;
 
 	width: 75%;
-	height: 75%;
-
-	min-height: 10vh;
+	height: 80%;
 }
 
 #titleBanner, #mainContent {
 	/*background-color: #87817C;*/
-	margin: 0 auto;
+	margin: auto;
 }
 
 #titleBanner {
-	background-color: rebeccapurple;
+	background-color: #a7cced;
 
 	margin: 0% .5% .5% .5%;
+	position: top;	
 
 	width: 99%;
 	height: 24%;
@@ -42,9 +40,9 @@ https://www.w3schools.com/css/css_website_layout.asp*/
 }
 
 #mainContent {
-	background-color: black;
+	background-color: #63adf2;
 
-	margin: .5%;
+	position: bottom;
 
 	width: 99%;
 	height: 74%;
@@ -54,8 +52,51 @@ https://www.w3schools.com/css/css_website_layout.asp*/
 	z-index: -1;
 	padding-top: 1%;
 
-	background-color: green;
+	background-color: #82a0bc;
 
 	width: 5%;
 	height: 2%;
 }
+
+.ROW {
+	margin: .5% auto;
+	/*background-color: #85bdf0;*/
+}
+
+#topBar {
+	width: 100%;
+	height: 24%;
+}
+
+#middleBar {
+	width: 100%;
+	height: 69%;
+}
+
+#bottomBar {
+	width: 100%;
+	height: 5%;
+}
+
+.COL {
+	float: left;
+	margin: auto .5% auto .5%;
+	/*background-color: #9fc9ee;*/
+}
+
+#leftCol {
+	width: 14%;
+	height: 100%;
+}
+
+#centerCol {
+	width: 69%;
+	height: 100%;
+}
+
+#rightCol {
+	width: 14%;
+	height: 100%;
+}
+
+

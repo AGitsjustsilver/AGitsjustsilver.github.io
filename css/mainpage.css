@@ -1,50 +1,68 @@
-* {
-	box-sizing: border-box;
-}
-
 html, body {
+	font-size: 16px;
 	background-color: #304d6d;
 	margin: 0;
 }
 
-/* Consider
-https://www.w3schools.com/css/css_website_layout.asp*/
-
 .table {
 	border-radius: 5px;
+	border: solid 1px black;
 }
 
 #contentContainer {
-	background-color: #545e75;
+	background-color: #82a0bc;
 
 	margin: 5px auto;
 	padding: 5px;
 
 }
 
-#titleBanner, #mainContent {
-	/*background-color: #87817C;*/
-}
-
-#titleBanner {
+#titleBanner{
 	background-color: #a7cced;
-	
-	width: 100%;
-}
-
-#titleBanner h1 {
-	font-size: 10vw;
-	font-size: 10vh;
+	font-size: 4rem;
 	text-align: center;
-	margin: 0;
+	font-weight: bold;
 }
 
-#button {
+.ROW {
+	margin: 5px auto;
+
+	background-color: #a7cced;
+}
+
+/* Navigation */
+
+#topBar {
+	height: 100%;
+}
+
+.collapsible {
+	padding: 18px;
+	
+	border: none;
+	float: left;
+	display: block;
+	
+	text-align: left;
+	outline: none;
+
+	background-color: #a7cced;
+}
+
+.active, .collapsible:hover {
 	background-color: #9fc9ee;
 }
 
-#mainContent {
-	background-color: #63adf2;
+.collContent {
+	padding: 0 18px;
+	display: none;
+	float: all;
+	overflow: hidden;
+}
+
+
+#middleBar, #bottomBar {
+	text-align: center;
 }
 
 #hiddenContent {
@@ -55,34 +73,5 @@ https://www.w3schools.com/css/css_website_layout.asp*/
 	position: fixed;
 	bottom: 0;
 	left: 0;
-
 }
-
-.ROW {
-	/*background-color: #85bdf0;*/
-}
-
-#topBar {
-}
-
-#middleBar {
-}
-
-#bottomBar {
-}
-
-.COL {
-	float: left;
-	/*background-color: #9fc9ee;*/
-}
-
-#leftCol {
-}
-
-#centerCol {
-}
-
-#rightCol {
-}
-
 

@@ -1,119 +1,79 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-png" href="./img/Shark.gif">
+	<title>Shortcuts! 2</title>
+	<link rel="stylesheet" type="text/css" href="./css/mainpage.css">
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-header content">
+			Shortcuts!
+		</div>
+		<div class="grid-nav content">
+			<button type="button" class="nav-button collapsible">Entertainment</button>
+			<div class="grid-col navigation drop">
+				<a href="https://old.reddit.com/">Reddit</a>
+	            <a href="https://twitter.com/">Twitter</a>
+	            <a href="https://mangakakalot.com/">Mangakalot</a>
+	            <a href="https://mangasee123.com/">Mangasee</a>
+            	<a href="https://www.twitch.tv/directory/following">Twitch TV</a>
+	            <a href="https://www.crunchyroll.com/simulcastcalendar">Crunchyroll</a>
+	            <a href="https://9anime.to">9anime</a>
+	            <a href="https://www.youtube.com/feed/subscriptions">YouTube</a>
+				<a href="https://play.spotify.com/">Spotify</a>
+			</div>
+			<button type="button" class="nav-button collapsible">Business</button>
+			<div class="grid-col navigation drop">
+				<a href="https://mail.google.com/">G-mail</a>
+				<a href="https://myci.csuci.edu/">My CI</a>
+				<a href="https://github.com/">Github</a>
+				<a href="https://drive.google.com">Google Drive</a>
+				<a href="https://trello.com/">Trello</a>
+			</div>
+			<button type="button" class="nav-button collapsible">Pleasure</button>
+			<div class="grid-col navigation drop">
+				<a href="https://www.bungie.net/">	Bungie</a>
+				<a href="https://www.dndbeyond.com/">D&D Beyond</a>
+				<a href="https://discord.com/app/">Discord</a>
+				<a href="https://app.roll20.net/">Roll 20</a>
+			</div>
+		</div>
+		<div class="grid-main content">
+			<div id="infoText">
+	            Hello and Welcome to the brand new shortcuts page
+	            <br>
+		        Please enjoy your visit :)
+		        <br>
+		        Have this shark gif
+			</div>
+        	<img src="./img/Shark.gif" alt="Shark Gif" id="mainSharkImg">
+		</div>
+		<div class="grid-footer content">
+			&copy; <a href="./resources/Updates.html">July 15, 2021</a>; Alessandro Guaresti
+		</div>
+	</div>
+	<div id="hiddenContent">
+		<a href="404.html" alt="Lenny face" title="I don't know.">¯\_(ツ)_/¯</a>
+	</div>
 
-  <head>
-    <meta charset="utf-8"/>
-    <title> Short Cuts! </title>
-    <link rel="stylesheet" type="text/css" href="\css\personal.external.1.css">
+	<script type="text/javascript">
+		var coll = document.getElementsByClassName('collapsible');
+		var i;
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+					content.style.display = "none";
+				} else {
+					content.style.display = "block";
+				}
+			});
+		}
+	</script>
 
-    <link rel="icon" type="image/x-png" href="\img\Shark.gif">
-  </head>
-  
-  <body>  
-    <script type="text/javascript">
-        var i = -1;
-        function bTarget () {
-            // change loop times when you add more links
-            for(var j=0; j <= 25; j++){
-                i++;
-                document.getElementsByTagName('a')[i].setAttribute("target", "_blank");
-            }
-        }
-        function sTarget () {
-            var x = location.href;
-            window.open(x);
-            window.close(x);
-        }
-    </script>
-    <div style="margin: 0 auto; width: 960px;" id="Site">
-      <table>
-        <tr id="Banner">
-            <td colspan="3" id="td0">
-                <img src="\img\Shortcuts.png" alt="SHORTCUTS!">
-                <div id="opt">
-                    Link options:
-                    <button onclick="bTarget();">New Tabs</button> |
-                    <button onclick="sTarget();">Same Tab</button>
-                </div>
-                <!-- Try to get all links to do what they are supposed to do when you click the option -->
-            </td>
-        </tr>
-        <tr>
-          <td colspan="3" class="padding" id="td1">
-            <p id="NavBar">Main Links</p>
-            <a href="https://old.reddit.com/">Reddit</a>
-            <a href="https://twitter.com/">Twitter</a>
-            <a href="https://mangakakalot.com/">Manga</a>
-            <a href="https://www.twitch.tv/directory/following">Twitch TV</a>
-            <a href="https://www.crunchyroll.com/simulcastcalendar">Anime</a>
-            <a href="https://www.youtube.com/feed/subscriptions">YouTube</a>
-            <a href="https://mail.google.com/">G-mail</a>
-            <a href="https://play.spotify.com/">Spotify</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="padding2" id="td2">
-            <p style="font-size: 20px;">School Links</p>
-            <a href="https://github.com/">Github</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="https://drive.google.com">Google Drive</a>
-            <br />
-            <p style="font-size: 15px;">*</p>
-            <a href="https://www.turnitin.com/s_home.asp?r=97.7389659020627&svr=05&session-id=2bab61c575a324c164788aa9358f61c1&lang=en_us&">Turn It In</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="https://colorschemedesigner.com/">Color Schemes</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="https://www.csuci.edu/">CSU Channel Islands</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="https://classroom.google.com/u/0/h">Google Classroom</a>
-            <br />
-          </td>
-
-          <td id="td4">
-            <p style="margin: center; font-size: 22px;">Hello and Welcome to the one and only shortcuts page<br />
-            Made by the one and only Alessandro Guaresti.<br />
-            Please enjoy your visit :)<br />
-            Also here is a shark gif</p>
-            <img src="\img\Shark.gif" alt="Shark Gif" id="img">
-          </td>
-
-          <td class="padding2" id="td3">
-            <p style="font-size: 20px;">Random Links</p>
-            <a href="https://www.bungie.net/">Bungie</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="https://www.dndbeyond.com/">D&D Beyond</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="/img/Shark.gif">Comp Shark gif</a>
-            <br />
-            <p style="font-size: 15px">*</p>
-            <a href="https://i.imgur.com/qOjENhs.gif">Best Dance Ever</a>
-            <br />
-            <p style="font-size: 15px">*</p>
-            <a href="https://i.imgur.com/zuiu2yO.gif">Procrastination gif</a>
-            <br />
-            <p style="font-size:15px;">*</p>
-            <a href="\Projects\SpookyScarySkeletons\2spooky4me.html">Spooky Scary Skeletons!</a>
-            <br />
-          </td>
-        </tr>
-        <tr>
-          <!-- Update This When worked on ok ;) -->
-            <td colspan="3" id="td5">
-                &copy; <a href="Updates.html">May 29, 2020</a>; <a href="Forms.html">Alessandro Guaresti</a>;
-            </td>
-        </tr>
-      </table>
-    </div>
-    <div id="Secret-Lenny">
-      <a href="404.html" alt="Lenny face" title="I don't know.">¯\_(ツ)_/¯</a>
-    </div>
-  </body>
-
+</body>
 </html>

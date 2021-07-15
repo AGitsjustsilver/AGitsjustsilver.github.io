@@ -1,69 +1,91 @@
 html, body {
-	font-size: 16px;
 	background-color: #304d6d;
 	margin: 0;
+	font-size: 18px;
 }
 
-.table {
+div {
 	border-radius: 5px;
-	border: solid 1px black;
 }
 
-#contentContainer {
-	background-color: #82a0bc;
-
-	margin: 5px auto;
-	padding: 5px;
-
+a {
+	color: #28405a;
+	font-size: .9rem;
+	text-decoration: none;
 }
 
-#titleBanner{
+a:hover {
+	color: #4a7db0;
+}
+
+.content {
 	background-color: #a7cced;
-	font-size: 4rem;
 	text-align: center;
+}
+
+.grid-container {
+	padding: 5px;
+	background-color: #82a0bc;
+	display: grid;
+	grid-gap: 5px;
+	width: 100%;
+}
+
+.grid-header {
+	font-size: 6rem;
 	font-weight: bold;
 }
 
-.ROW {
-	margin: 5px auto;
+.grid-nav {
 
-	background-color: #a7cced;
 }
 
-/* Navigation */
-
-#topBar {
-	height: 100%;
-}
-
-.collapsible {
-	padding: 18px;
-	
-	border: none;
+.grid-col {
 	float: left;
-	display: block;
-	
-	text-align: left;
-	outline: none;
+	grid-column-gap: 5px;
+	margin: 2px;
+}
 
+.nav-button {
+	font-size: 1rem;
 	background-color: #a7cced;
+	border: none;
+	padding: 10px;
+	width: 100%;
 }
 
-.active, .collapsible:hover {
-	background-color: #9fc9ee;
+.nav-button:hover {
+	background-color: #85bdf0;
 }
 
-.collContent {
-	padding: 0 18px;
+.drop {
 	display: none;
-	float: all;
 	overflow: hidden;
+	float: none;
 }
 
-
-#middleBar, #bottomBar {
-	text-align: center;
+.drop a {	
+	padding: 5px;
 }
+
+.eCol {
+	align-content: center;
+	float: left;
+}
+
+.sub {
+	width: 45%;
+}
+
+.grid-main {
+
+}
+
+.grid-footer {
+
+}
+
+/**/
 
 #hiddenContent {
 	z-index: 2;
@@ -74,4 +96,3 @@ html, body {
 	bottom: 0;
 	left: 0;
 }
-

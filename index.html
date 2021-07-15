@@ -4,61 +4,55 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-png" href="./img/Shark.gif">
-	<title>Short Cuts!</title>
+	<title>Shortcuts! 2</title>
 	<link rel="stylesheet" type="text/css" href="./css/mainpage.css">
 </head>
 <body>
-	<div id="contentContainer" class="table">
-		<div id="titleBanner" class="table">SHORTCUTS!</div>
-		<div id="mainContent" class="table">
-			<div id="topBar" class="table ROW">
-				<button type="button" class="collapsible">Entertainment</button>
-				<div class="collContent">
-					<button type="button" class="collapsible">Reading</button>
-					<div id="reading" class="collContent">
-						<a href="https://old.reddit.com/">Reddit</a>
-			            <a href="https://twitter.com/">Twitter</a>
-			            <a href="https://mangakakalot.com/">Mangakalot</a>
-			            <a href="https://mangasee123.com/">Mangasee</a>
-					</div>
-					<button type="button" class="collapsible">Watching</button>
-					<div id="watching" class="collContent">
-		            	<a href="https://www.twitch.tv/directory/following">Twitch TV</a>
-			            <a href="https://www.crunchyroll.com/simulcastcalendar">Crunchyroll</a>
-			            <a href="https://9anime.to">9anime</a>
-			            <a href="https://www.youtube.com/feed/subscriptions">YouTube</a>
-					</div>
-					<a href="https://play.spotify.com/">Spotify</a>
-				</div>
-				<button type="button" class="collapsible">Business</button>
-				<div class="collContent">
-					<a href="https://mail.google.com/">G-mail</a>
-					<a href="https://myci.csuci.edu/">My CI</a>
-					<a href="https://github.com/">Github</a>
-					<a href="https://drive.google.com">Google Drive</a>
-					<a href="https://trello.com/">Trello</a>
-				</div>
-				<button type="button" class="collapsible">Pleasure</button>
-				<div class="collContent">
-					<a href="https://www.bungie.net/">	Bungie</a>
-					<a href="https://www.dndbeyond.com/">D&D Beyond</a>
-					<a href="https://discord.com/app/">Discord</a>
-					<a href="https://app.roll20.net/">Roll 20</a>
-				</div>            
+	<div class="grid-container">
+		<div class="grid-header content">
+			Shortcuts!
+		</div>
+		<div class="grid-nav content">
+			<button type="button" class="nav-button collapsible">Entertainment</button>
+			<div class="grid-col navigation drop">
+				<a href="https://old.reddit.com/">Reddit</a>
+	            <a href="https://twitter.com/">Twitter</a>
+	            <a href="https://mangakakalot.com/">Mangakalot</a>
+	            <a href="https://mangasee123.com/">Mangasee</a>
+            	<a href="https://www.twitch.tv/directory/following">Twitch TV</a>
+	            <a href="https://www.crunchyroll.com/simulcastcalendar">Crunchyroll</a>
+	            <a href="https://9anime.to">9anime</a>
+	            <a href="https://www.youtube.com/feed/subscriptions">YouTube</a>
+				<a href="https://play.spotify.com/">Spotify</a>
 			</div>
-			<div id="middleBar" class="table ROW">
-				<div id="infoText">
-		            Hello and Welcome to the brand new shortcuts page
-		            <br>
-			        Please enjoy your visit :)
-			        <br>
-			        Have this shark gif
-				</div>
-            	<img src="./img/Shark.gif" alt="Shark Gif" id="mainSharkImg">
+			<button type="button" class="nav-button collapsible">Business</button>
+			<div class="grid-col navigation drop">
+				<a href="https://mail.google.com/">G-mail</a>
+				<a href="https://myci.csuci.edu/">My CI</a>
+				<a href="https://github.com/">Github</a>
+				<a href="https://drive.google.com">Google Drive</a>
+				<a href="https://trello.com/">Trello</a>
 			</div>
-			<div id="bottomBar" class="table ROW">
-				&copy; <a href="Updates.html">July 7, 2021</a>; Alessandro Guaresti;
+			<button type="button" class="nav-button collapsible">Pleasure</button>
+			<div class="grid-col navigation drop">
+				<a href="https://www.bungie.net/">	Bungie</a>
+				<a href="https://www.dndbeyond.com/">D&D Beyond</a>
+				<a href="https://discord.com/app/">Discord</a>
+				<a href="https://app.roll20.net/">Roll 20</a>
 			</div>
+		</div>
+		<div class="grid-main content">
+			<div id="infoText">
+	            Hello and Welcome to the brand new shortcuts page
+	            <br>
+		        Please enjoy your visit :)
+		        <br>
+		        Have this shark gif
+			</div>
+        	<img src="./img/Shark.gif" alt="Shark Gif" id="mainSharkImg">
+		</div>
+		<div class="grid-footer content">
+			&copy; <a href="./resources/Updates.html">July 15, 2021</a>; Alessandro Guaresti
 		</div>
 	</div>
 	<div id="hiddenContent">
@@ -66,19 +60,20 @@
 	</div>
 
 	<script type="text/javascript">
-	var coll = document.getElementsByClassName('collapsible');
-	var i;
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			if (content.style.display === "block") {
-				content.style.display = "none";
-			} else {
-				content.style.display = "block";
-			}
-		});
-	}
-</script>
+		var coll = document.getElementsByClassName('collapsible');
+		var i;
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+					content.style.display = "none";
+				} else {
+					content.style.display = "block";
+				}
+			});
+		}
+	</script>
+
 </body>
 </html>

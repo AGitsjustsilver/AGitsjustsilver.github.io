@@ -1,7 +1,9 @@
 html, body {
 	background-color: #304d6d;
-	margin: 0;
+	margin: auto;
 	font-size: 18px;
+	min-width: 400px;
+	max-width: 750px;
 }
 
 div {
@@ -26,7 +28,7 @@ a:hover {
 .grid-container {
 	padding: 5px;
 	background-color: #82a0bc;
-	display: grid;
+	display: inline-grid;
 	grid-gap: 5px;
 	width: 100%;
 }
@@ -34,10 +36,6 @@ a:hover {
 .grid-header {
 	font-size: 6rem;
 	font-weight: bold;
-}
-
-.grid-nav {
-
 }
 
 .grid-col {
@@ -68,31 +66,22 @@ a:hover {
 	padding: 5px;
 }
 
-.eCol {
-	align-content: center;
-	float: left;
-}
-
-.sub {
-	width: 45%;
-}
-
-.grid-main {
-
-}
-
-.grid-footer {
-
-}
 
 /**/
 
 #hiddenContent {
 	z-index: 2;
 
-	background-color: #82a0bc;
+	/*background-color: #82a0bc;*/
 
 	position: fixed;
 	bottom: 0;
 	left: 0;
+}
+
+@media screen and (max-width:  500px) {
+	.grid-header {
+		font-size: 4rem;
+		font-weight: bold;
+	}
 }

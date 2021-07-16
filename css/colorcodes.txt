@@ -1,9 +1,16 @@
+CTE Shortcuts colors
 AEA7A7
-original colors
 837C7C
 
 
+Shortcuts colors
 87817C
-colors
 554F4F
 
+Shortcuts 2 Colors
+#304d6d
+#28405a
+#4a7db0
+#a7cced
+#85bdf0
+#82a0bc

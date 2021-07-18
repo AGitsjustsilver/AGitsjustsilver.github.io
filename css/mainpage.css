@@ -1,9 +1,9 @@
 html, body {
 	background-color: #304d6d;
 	margin: auto;
-	font-size: 18px;
+	font-size: 25px;
 	min-width: 400px;
-	max-width: 750px;
+	max-width: 900px;
 }
 
 div {
@@ -34,7 +34,11 @@ a:hover {
 }
 
 .grid-header {
-	font-size: 6rem;
+	font-size: clamp( 3rem, -.2rem + 12.8vw, 7rem);
+	/*
+	min 2rem
+	max 8rem
+	*/
 	font-weight: bold;
 }
 
@@ -77,11 +81,4 @@ a:hover {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-}
-
-@media screen and (max-width:  500px) {
-	.grid-header {
-		font-size: 4rem;
-		font-weight: bold;
-	}
 }

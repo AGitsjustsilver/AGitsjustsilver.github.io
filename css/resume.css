@@ -1,0 +1,58 @@
+html, body {
+	margin: 0;
+}
+
+div {
+	border: dashed 1px black;
+}
+
+.resume-content {
+	background-color: black;
+	margin: 5px;
+
+	text-align: center;
+	display: block;
+
+
+	min-width: 400px;
+	max-width: 1000px;
+}
+
+.side-col {
+	background-color: lightblue;
+	/*
+		min:  4rem;
+		max:  14rem;
+	*/
+	width: clamp(4rem, -5.3rem + 37.3vw, 18rem);
+	float: left;
+	margin: 15px 5px;
+}
+
+.content-col {
+	background-color: lightblue;
+	/*
+		min:  21rem;
+		max:  41rem;
+	*/
+	width: clamp( 21rem, 7.6rem + 53.3vw, 41rem);
+	float: left;
+	margin: 15px 5px;
+}
+
+.image {
+	width: 150px;
+	height: 150px;
+}
+
+.infoText {
+	height: 20rem;
+}
+
+.awardText {
+	height: 20rem;
+}
+
+.unit {
+	height: 13.5rem;
+}

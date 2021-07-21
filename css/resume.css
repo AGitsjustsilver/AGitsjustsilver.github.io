@@ -1,25 +1,45 @@
 html, body {
-	margin: 0;
+	margin: auto;
+	background-color: lightblue;
 }
 
 div {
 	border: dashed 1px black;
 }
 
+hr {
+	margin: 4px 0px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 5px 0px;
+	padding: 0px 0px 0px 15px;
+}
+
+ul ul {
+	margin: 0;
+}
+
+h4 {
+	margin: 15px 0px 5px;
+	padding: 0px 10px 0px;
+}
+
 .resume-content {
-	background-color: black;
 	margin: 5px;
 
-	text-align: center;
 	display: block;
 
+	min-width: 400px; /* 25 rem */
+	max-width: 1000px; /* 62.5 rem */
+}
 
-	min-width: 400px;
-	max-width: 1000px;
+.side-col, .content-col {
+	padding: 3px;
 }
 
 .side-col {
-	background-color: lightblue;
 	/*
 		min:  4rem;
 		max:  14rem;
@@ -30,29 +50,26 @@ div {
 }
 
 .content-col {
-	background-color: lightblue;
 	/*
 		min:  21rem;
 		max:  41rem;
 	*/
-	width: clamp( 21rem, 7.6rem + 53.3vw, 41rem);
+	width: clamp( 21rem, 8.3rem + 50.6vw, 40rem);
 	float: left;
 	margin: 15px 5px;
 }
 
+.title {
+	margin: 5px 0px;
+}
+
 .image {
+	margin: 0px auto;
 	width: 150px;
 	height: 150px;
 }
 
-.infoText {
-	height: 20rem;
-}
-
-.awardText {
-	height: 20rem;
-}
-
-.unit {
-	height: 13.5rem;
+.unit h3, h6 {
+	margin-top: 10px;
+	margin-bottom: 2px;
 }

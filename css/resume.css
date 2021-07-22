@@ -4,7 +4,7 @@ html, body {
 }
 
 div {
-	border: dashed 1px black;
+	/*border: dashed 1px black;*/
 }
 
 hr {
@@ -47,6 +47,10 @@ h4 {
 	width: clamp(4rem, -5.3rem + 37.3vw, 18rem);
 	float: left;
 	margin: 15px 5px;
+}
+
+.spacer {
+	height: 40px;
 }
 
 .content-col {

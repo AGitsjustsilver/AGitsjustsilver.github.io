@@ -18,6 +18,7 @@
 5. Let rest for 3 minutes and whisk again for 30 seconds, repeating this step 2 more times until mixture is thick, smooth, and shiny.
 6. In a seperate bowl mix the flour and baking soda together.
 7. Hand stir the dry mix with the wet mix until just combined
-8. (Optional) Stir in any mix-ins.
-9. (Recomended) Chill mixture for about an hour or two
-10. Preheat oven to 375F and bake for 10-14 minutes until golden brown.
+8. (Optional) Stir in any mix-ins. (general rule to follow is 150g to 200g of total mix ins)
+9. (Recomended) Chill mixture for at least 20 minutes up to 72 hours. (the longer the more flavor is developed)
+10. Scoop out 35 to 40g of cookie dough and form into balls, spaced by at least an inch appart.
+11. Preheat oven to 375F and bake for 10-14 minutes or until golden brown around the edges.

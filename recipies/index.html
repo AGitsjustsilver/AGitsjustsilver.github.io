@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="../img/Shark.gif">
+    <title>Recipies</title>
+    <link rel="stylesheet" type="text/css" href="../css/mainpage.css">
+</head>
+<body>
+    <div class="grid-container">
+        <p id="list"></p>
+        <div id="recipies-bar" class="recipies"></div>
+        <div id="display" class="recipie-card" markdown="1">
+        </div>
+    </div>
+    <script>
+        const path = window.location.pathname;
+        let start = path.indexOf("/recipies");
+        let end  = path.indexOf("index.html");
+        let folder = path.slice(start, end)
+        document.getElementById("list").innerHTML = folder;
+
+
+        let recipie_File = ["cookie_base.md", "lembas_bread.md", "orange_cake.md"];
+
+        function extract_name(file_name) {
+            return file_name.slice(0, file_name.indexOf(".md")).replace('_', " ");            
+        }
+
+        // TODO: Fix MD Display 
+        async function changeRecipie(file_name) {
+            console.log(file_name);
+
+            let file = await fetch("https://agitsjustsilver.github.io/recipies/" + file_name);
+            let text = await file.text(); 
+            
+            document.getElementById("display").innerHTML = "\n\n" + text + "\n\n";
+        }
+
+        const rb = document.getElementById("recipies-bar");
+        for (let index = 0; index < recipie_File.length; index++) {
+            
+            const parent = document.createElement("div");
+            const node = document.createTextNode(extract_name(recipie_File[index]));
+
+            parent.style.margin = "0px 10px 0px";
+            
+            parent.class = "";
+            parent.onclick = function() { changeRecipie(recipie_File[index]) };
+            
+            parent.appendChild(node);
+            rb.appendChild(parent);
+
+        }
+
+
+    </script>
+</body>
+</html>

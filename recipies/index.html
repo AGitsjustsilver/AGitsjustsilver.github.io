@@ -35,7 +35,7 @@
             let file = await fetch("https://agitsjustsilver.github.io/recipies/" + file_name);
             let text = await file.text(); 
             
-            document.getElementById("display").innerHTML = "\n\n" + text + "\n\n";
+            document.getElementById("display").innerHTML = text;
         }
 
         const rb = document.getElementById("recipies-bar");

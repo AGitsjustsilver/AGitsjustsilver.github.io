@@ -42,10 +42,22 @@ a:hover {
 	font-weight: bold;
 }
 
-.grid-col {
+.grid-main {
+	display: flex;
+}
+
+.grid-row {
 	float: left;
 	grid-column-gap: 5px;
 	margin: 2px;
+}
+
+.grid-break { 
+	width: .5%;
+}
+
+.grid-col {
+
 }
 
 .nav-button {
@@ -81,4 +93,20 @@ a:hover {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+}
+
+/* Recipies */
+
+.recipie-links {
+	flex: 15%;
+}
+
+.recipie-link {
+	display: block;
+}
+
+.recipie-card {
+	flex: 75%;
+	border: none;
+	border-radius: 5px;
 }

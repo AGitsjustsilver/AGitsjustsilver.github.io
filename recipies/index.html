@@ -9,44 +9,39 @@
 </head>
 <body>
     <div class="grid-container">
-        <p id="list"></p>
-        <div id="recipies-bar" class="recipies"></div>
-        <section id="display" class="recipie-card" markdown="block">
-        </section>
+        <div class="grid-header content">Recipies</div>
+        <div class="grid-main">
+            <div id="recipies-bar" class="grid-col recipie-links content"></div>
+            <div class="grid-break"></div>
+            <iframe id="display" class="grid-col recipie-card content" src="./cookie_base.md" scrolling="no"
+                onload="display.style.height = (display.contentWindow.document.body.scrollHeight + 20) +'px'">
+                >
+            </iframe>
+        </div>
     </div>
     <script>
-        const path = window.location.pathname;
-        let start = path.indexOf("/recipies");
-        let end  = path.indexOf("index.html");
-        let folder = path.slice(start, end)
-        document.getElementById("list").innerHTML = folder;
 
-
-        let recipie_File = ["cookie_base.md", "lembas_bread.md", "orange_cake.md"];
+        let recipie_File = ["cookie_base.md", "lembas_bread.md", "orange_cake.md" ];
 
         function extract_name(file_name) {
             return file_name.slice(0, file_name.indexOf(".md")).replace('_', " ");            
         }
 
-        // TODO: Fix MD Display 
         async function changeRecipie(file_name) {
-            console.log(file_name);
-
-            let file = await fetch("https://agitsjustsilver.github.io/recipies/" + file_name);
-            let text = await file.text(); 
-            
-            document.getElementById("display").innerHTML = text;
+            console.log("Changing to: " + file_name);
+            const display = document.getElementById("display");
+            display.src = file_name;
         }
 
         const rb = document.getElementById("recipies-bar");
         for (let index = 0; index < recipie_File.length; index++) {
             
-            const parent = document.createElement("div");
+            const parent = document.createElement("a");
             const node = document.createTextNode(extract_name(recipie_File[index]));
 
-            parent.style.margin = "0px 10px 0px";
+            parent.style.margin = "2px 10px 4px";
+            parent.classList = "recipie-link content"
             
-            parent.class = "";
             parent.onclick = function() { changeRecipie(recipie_File[index]) };
             
             parent.appendChild(node);

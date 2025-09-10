@@ -2,38 +2,45 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#a7cced">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-png" href="../img/Shark.gif">
-    <title>Recipies</title>
+    <title>recipes</title>
     <link rel="stylesheet" type="text/css" href="../css/mainpage.css">
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-header content">Recipies</div>
+        <div class="grid-header content">Recipes</div>
         <div class="grid-main">
-            <div id="recipies-bar" class="grid-col recipie-links content"></div>
+            <div id="recipes-bar" class="grid-col recipie-links content"></div>
             <div class="grid-break"></div>
-            <iframe id="display" class="grid-col recipie-card content" src="./cookie_base.md" scrolling="no"
+            <iframe 
+                id="display" 
+                class="grid-col recipie-card content" 
+                src="./cookie_base.md" 
+
                 onload="display.style.height = (display.contentWindow.document.body.scrollHeight + 20) +'px'">
                 >
             </iframe>
         </div>
     </div>
     <script>
-
+        const display = document.getElementById("display");
+        const rb = document.getElementById("recipes-bar");
         let recipie_File = ["cookie_base.md", "lembas_bread.md", "orange_cake.md" ];
+        let curent_Recipie = ;
 
         function extract_name(file_name) {
             return file_name.slice(0, file_name.indexOf(".md")).replace('_', " ");            
         }
 
-        async function changeRecipie(file_name) {
+        async function changeRecipie(obj, file_name) {
             console.log("Changing to: " + file_name);
-            const display = document.getElementById("display");
+            obj.style.backgroundColor = "#C8DFF4";
+            obj.style.borderRadius = "3px";
             display.src = file_name;
         }
 
-        const rb = document.getElementById("recipies-bar");
         for (let index = 0; index < recipie_File.length; index++) {
             
             const parent = document.createElement("a");
@@ -42,13 +49,16 @@
             parent.style.margin = "2px 10px 4px";
             parent.classList = "recipie-link content"
             
-            parent.onclick = function() { changeRecipie(recipie_File[index]) };
+            parent.onclick = function() { changeRecipie(parent, recipie_File[index]) };
             
             parent.appendChild(node);
             rb.appendChild(parent);
 
         }
 
+        screen.orientation.addEventListener("change", function (e) {
+            display.style.height = (display.contentWindow.document.body.scrollHeight + 20) + 'px'; 
+        });
 
     </script>
 </body>

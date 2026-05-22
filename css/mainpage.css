@@ -95,7 +95,7 @@ a:hover {
 	left: 0;
 }
 
-/* Recipies */
+/* recipes */
 
 .recipie-links {
 	flex: 15%;
@@ -109,4 +109,5 @@ a:hover {
 	flex: 75%;
 	border: none;
 	border-radius: 5px;
+	overflow: hidden;
 }
